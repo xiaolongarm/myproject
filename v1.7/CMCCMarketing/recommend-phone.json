@@ -1,0 +1,24 @@
+{
+	"recommend":[
+		{
+			"name":"三星GALAXY S4(I9500)",
+			"img":"phone-s4.png",
+			"price":"5199元",
+			"desc":"旗舰机型、八核、高像素、5寸屏、超薄机身、适合手机阅读、玩游戏"
+		}
+	],
+	"phone":[
+		{
+			"name":"三星GALAXY Note2",
+			"img":"phone-n2.png",
+			"price":"4299元",
+			"desc":"高端机、800万像素、5.5寸屏、超薄机身、适合手机阅读、玩游戏"
+		},
+		{
+			"name":"三星GALAXY S3(I9300)",
+			"img":"phone-s3.png",
+			"price":"2999元",
+			"desc":"高端机、800万像素、4.8寸屏、超薄机身、适合手机阅读、玩游戏"
+		}
+	]
+}

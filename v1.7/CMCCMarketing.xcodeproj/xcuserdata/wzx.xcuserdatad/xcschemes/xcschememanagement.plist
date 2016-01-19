@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>CMCCMarketing-CS.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>CMCCMarketing-Manager-CS.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>CMCCMarketing-Manager-SY.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<true/>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>CMCCMarketing-SY.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<true/>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>692CCB801A5281BD0047440A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>692CCD241A5284710047440A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>69ED6E5319B46E8800BCFFBA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>69ED6E7419B46E8900BCFFBA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>69FE04A01A41608C00113C71</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

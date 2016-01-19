@@ -1,0 +1,10 @@
+/* 
+  InfoPlist.strings
+  CMCCMarketing
+
+  Created by talkweb on 14-9-3.
+  Copyright (c) 2014年 talkweb. All rights reserved.
+*/
+
+CFBundleDisplayName="主管版";
+CFBundleName="主管版";

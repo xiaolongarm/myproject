@@ -1,0 +1,662 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="ZDo-bR-aUM">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="IJV-2B-Wu8">
+            <objects>
+                <navigationController storyboardIdentifier="OtherRegressViewControllerId" definesPresentationContext="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ZDo-bR-aUM" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wlS-ur-PYj">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="s8w-ul-0eA" kind="relationship" relationship="rootViewController" id="8xf-VN-FrA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HSt-U4-Hch" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-895" y="101"/>
+        </scene>
+        <!--异网回归-->
+        <scene sceneID="vhR-hG-5VG">
+            <objects>
+                <viewController id="s8w-ul-0eA" customClass="OtherRegressViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1EX-iW-CRS"/>
+                        <viewControllerLayoutGuide type="bottom" id="qNT-Mm-7Qg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PnX-wB-9Nt">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0BV-0v-KYj">
+                                <rect key="frame" x="20" y="99" width="140" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="5Pr-pZ-9zG"/>
+                                    <constraint firstAttribute="height" constant="30" id="e8B-st-elZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="已联系" backgroundImage="switch_hui1.png">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" backgroundImage="switch_chen1.png"/>
+                                <connections>
+                                    <action selector="contactedButtonOnclick:" destination="s8w-ul-0eA" eventType="touchUpInside" id="rZD-UV-tb2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rBK-SS-ZnX">
+                                <rect key="frame" x="160" y="99" width="140" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="1Hc-GJ-TnY"/>
+                                    <constraint firstAttribute="height" constant="30" id="4Av-fz-UdM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal" backgroundImage="switch_hui2.png">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" backgroundImage="switch_chen2.png"/>
+                                <connections>
+                                    <action selector="pendingContactButtonOnclick:" destination="s8w-ul-0eA" eventType="touchUpInside" id="nhp-Ex-1to"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="暂无联系客户" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oOa-av-T6D">
+                                <rect key="frame" x="62" y="156" width="197" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="0Y1-3q-2ui">
+                                <rect key="frame" x="-6" y="140" width="326" height="428"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="OtherRegressTableViewCell" rowHeight="60" id="35S-bc-yEF" customClass="OtherRegressTableViewCell">
+                                        <rect key="frame" x="0.0" y="22" width="326" height="60"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="35S-bc-yEF" id="voX-8G-eBa">
+                                            <rect key="frame" x="0.0" y="0.0" width="293" height="59"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="13033457893" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I1A-7n-zk9">
+                                                    <rect key="frame" x="63" y="9" width="83" height="21"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="刘胡兰" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fhO-ch-7z5">
+                                                    <rect key="frame" x="154" y="9" width="52" height="21"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="电信.png" translatesAutoresizingMaskIntoConstraints="NO" id="52i-N3-tT7">
+                                                    <rect key="frame" x="19" y="12" width="35" height="35"/>
+                                                    <animations/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="电话.png" translatesAutoresizingMaskIntoConstraints="NO" id="KkI-ww-Q2c">
+                                                    <rect key="frame" x="62" y="28" width="24" height="24"/>
+                                                    <animations/>
+                                                </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="7月1日 15:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Cd-QR-8bq">
+                                                    <rect key="frame" x="144" y="31" width="95" height="21"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="高端用户" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ARc-vP-eD7">
+                                                    <rect key="frame" x="214" y="9" width="52" height="21"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                                    <color key="textColor" red="0.5429048782" green="0.73431095899999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="星期一" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N0U-fK-EN3">
+                                                    <rect key="frame" x="93" y="31" width="43" height="21"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="25q-NF-FAq">
+                                                    <rect key="frame" x="55" y="26" width="231" height="31"/>
+                                                    <subviews>
+                                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="已回归" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8G0-9U-WrN">
+                                                            <rect key="frame" x="37" y="6" width="114" height="21"/>
+                                                            <animations/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                            <color key="textColor" red="0.20000000000000001" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="绿勾选.png" translatesAutoresizingMaskIntoConstraints="NO" id="O20-S0-s3c">
+                                                            <rect key="frame" x="9" y="4" width="24" height="24"/>
+                                                            <animations/>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <animations/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </view>
+                                            </subviews>
+                                            <animations/>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                        <connections>
+                                            <outlet property="itemContactDate" destination="7Cd-QR-8bq" id="DX2-Rw-7Ve"/>
+                                            <outlet property="itemIsBackBodyView" destination="25q-NF-FAq" id="4Kr-Jt-U1i"/>
+                                            <outlet property="itemLvl" destination="ARc-vP-eD7" id="epv-uA-hg6"/>
+                                            <outlet property="itemMainImageView" destination="52i-N3-tT7" id="xCL-5E-JNl"/>
+                                            <outlet property="itemName" destination="fhO-ch-7z5" id="UX2-6Q-HxU"/>
+                                            <outlet property="itemPhone" destination="I1A-7n-zk9" id="LcU-EM-d3N"/>
+                                            <outlet property="itemTeleImageView" destination="KkI-ww-Q2c" id="iYT-Ed-IXW"/>
+                                            <outlet property="itemWeek" destination="N0U-fK-EN3" id="Lvb-18-JZQ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dB8-6a-4Nu">
+                                <rect key="frame" x="71" y="66" width="178" height="22"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="STHeitiSC-Medium" family="Heiti SC" pointSize="15"/>
+                                <state key="normal" title="您有3条新消息..." image="箭头.png">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="remingButtonOnclick:" destination="s8w-ul-0eA" eventType="touchUpInside" id="fOL-lU-Sq3"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="实线条.png" translatesAutoresizingMaskIntoConstraints="NO" id="2R9-gN-AvX">
+                                <rect key="frame" x="-6" y="137" width="330" height="5"/>
+                                <animations/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="今天 2014-12-16" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GB4-gc-eqF">
+                                <rect key="frame" x="82" y="68" width="157" height="26"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l12-xE-i83">
+                                <rect key="frame" x="243" y="66" width="75" height="29"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" title="［ 搜 索 ］">
+                                    <color key="titleColor" red="0.5429048782" green="0.73431095899999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="searchOnclick:" destination="s8w-ul-0eA" eventType="touchUpInside" id="HfZ-tm-mzN"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="待联系" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p5z-hL-zEL">
+                                <rect key="frame" x="173" y="103" width="64" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="（0）" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AZd-Vz-n4o">
+                                <rect key="frame" x="237" y="103" width="70" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z4O-wH-j3D">
+                                <rect key="frame" x="0.0" y="64" width="320" height="78"/>
+                                <subviews>
+                                    <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xRy-Js-gCS">
+                                        <rect key="frame" x="0.0" y="34" width="320" height="44"/>
+                                        <animations/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </searchBar>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S1t-iK-9wM">
+                                        <rect key="frame" x="223" y="4" width="95" height="30"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <state key="normal" title="［ 退出搜索 ］">
+                                            <color key="titleColor" red="0.5429048782" green="0.73431095899999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="exitSearchOnclick:" destination="s8w-ul-0eA" eventType="touchUpInside" id="wv7-6I-yj9"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qNT-Mm-7Qg" firstAttribute="top" secondItem="0Y1-3q-2ui" secondAttribute="bottom" id="3eT-86-iqX"/>
+                            <constraint firstItem="0Y1-3q-2ui" firstAttribute="top" secondItem="2R9-gN-AvX" secondAttribute="bottom" constant="-2" id="8KR-ms-E8H"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="异网回归" id="hJc-Kw-8m6">
+                        <barButtonItem key="backBarButtonItem" title="返回" id="fky-KS-1lJ"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="contactedButton" destination="0BV-0v-KYj" id="KZl-J6-LmU"/>
+                        <outlet property="lbDate" destination="GB4-gc-eqF" id="aWX-fS-kCy"/>
+                        <outlet property="lbNullLabel" destination="oOa-av-T6D" id="5Ey-lu-vAF"/>
+                        <outlet property="lbPendingContactNumber" destination="AZd-Vz-n4o" id="kK6-qC-Z8c"/>
+                        <outlet property="lbPendingContactTitle" destination="p5z-hL-zEL" id="FcC-gQ-0yQ"/>
+                        <outlet property="otherRegressTableView" destination="0Y1-3q-2ui" id="AR3-Ye-SgY"/>
+                        <outlet property="pendingContactButton" destination="rBK-SS-ZnX" id="c0J-la-iuX"/>
+                        <outlet property="remindButton" destination="dB8-6a-4Nu" id="seL-wU-kkk"/>
+                        <outlet property="searchBar" destination="xRy-Js-gCS" id="9hD-zc-N37"/>
+                        <outlet property="searchBodyView" destination="Z4O-wH-j3D" id="9Tz-1d-Eb6"/>
+                        <segue destination="N6Y-LU-vqD" kind="push" identifier="OtherRegressMessageSegue" id="dtb-Dq-Vi4"/>
+                        <segue destination="mPp-rJ-Owa" kind="push" identifier="OtherRegressCustomerSegue" id="n4D-90-XD5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eim-1t-9iJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-144" y="101"/>
+        </scene>
+        <!--客户信息-->
+        <scene sceneID="4iI-kR-c1m">
+            <objects>
+                <viewController id="mPp-rJ-Owa" customClass="OtherRegressCustomerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KmP-0n-uGD"/>
+                        <viewControllerLayoutGuide type="bottom" id="nw1-wl-RM1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="o4k-WT-gpQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="13033457893" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pbL-S5-8j3">
+                                <rect key="frame" x="17" y="121" width="83" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="刘胡兰" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pMl-TC-ULi">
+                                <rect key="frame" x="108" y="121" width="52" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="高端用户" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ske-lc-Aki">
+                                <rect key="frame" x="168" y="121" width="52" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                <color key="textColor" red="0.5429048782" green="0.73431095899999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RJs-Cf-k1x">
+                                <rect key="frame" x="0.0" y="150" width="320" height="33"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="历史联系记录" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N4P-Le-W4J">
+                                        <rect key="frame" x="20" y="6" width="83" height="21"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Bs5-E8-Trs">
+                                <rect key="frame" x="0.0" y="183" width="320" height="385"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="OtherRegressCustomerTableViewCell" id="xAr-lh-kOC" customClass="OtherRegressCustomerTableViewCell">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xAr-lh-kOC" id="76L-ae-Kj3">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="13-08-12" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R9J-XW-Jmf">
+                                                    <rect key="frame" x="18" y="10" width="67" height="21"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="客户抱怨3g网络不好" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FFW-Hr-ARi">
+                                                    <rect key="frame" x="139" y="10" width="161" height="21"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="电话.png" translatesAutoresizingMaskIntoConstraints="NO" id="2v8-RA-MFW">
+                                                    <rect key="frame" x="93" y="9" width="25" height="25"/>
+                                                    <animations/>
+                                                </imageView>
+                                            </subviews>
+                                            <animations/>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                        <connections>
+                                            <outlet property="itemContent" destination="FFW-Hr-ARi" id="fo3-K1-qWf"/>
+                                            <outlet property="itemDate" destination="R9J-XW-Jmf" id="vUd-jg-cxp"/>
+                                            <outlet property="itemTypeImage" destination="2v8-RA-MFW" id="mv6-kR-66T"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ba3-Cd-Svz">
+                                <rect key="frame" x="26" y="73" width="130" height="40"/>
+                                <animations/>
+                                <state key="normal" image="电话按钮.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="callPhone:" destination="mPp-rJ-Owa" eventType="touchUpInside" id="w0O-sK-zsn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tbx-7A-DUC">
+                                <rect key="frame" x="164" y="73" width="130" height="40"/>
+                                <animations/>
+                                <state key="normal" image="短信按钮.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="callSMS:" destination="mPp-rJ-Owa" eventType="touchUpInside" id="vBX-ek-nNQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Bs5-E8-Trs" firstAttribute="top" secondItem="RJs-Cf-k1x" secondAttribute="bottom" id="Bg7-tL-fxn"/>
+                            <constraint firstItem="nw1-wl-RM1" firstAttribute="top" secondItem="Bs5-E8-Trs" secondAttribute="bottom" id="Eim-Wy-SLQ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="客户信息" id="fiL-0j-jFh">
+                        <barButtonItem key="backBarButtonItem" title="返回" id="sYQ-0h-rW7"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="customerLvl" destination="Ske-lc-Aki" id="1TR-gK-K0v"/>
+                        <outlet property="customerName" destination="pMl-TC-ULi" id="m4j-hx-qTd"/>
+                        <outlet property="customerPhone" destination="pbL-S5-8j3" id="npD-je-MOl"/>
+                        <outlet property="customerTableView" destination="Bs5-E8-Trs" id="yra-ev-uIR"/>
+                        <segue destination="K97-cS-Ym6" kind="push" identifier="OtherRegressFeedbackControllerCallPhoneSegue" id="TbE-fa-b0a"/>
+                        <segue destination="K97-cS-Ym6" kind="push" identifier="OtherRegressFeedbackControllerSmsSegue" id="p1k-U0-LGY"/>
+                        <segue destination="JXX-ro-FwS" kind="push" identifier="OtherRegressCustomerDetailsSegue" id="lk6-5d-QHC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tru-zX-P5C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="818" y="1142"/>
+        </scene>
+        <!--客户资料-->
+        <scene sceneID="YvW-Ln-qAv">
+            <objects>
+                <tableViewController id="JXX-ro-FwS" customClass="OtherRegressCustomerDetailsTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="wQ7-bi-yWw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="OtherRegresCustomerDetailsTableViewCell" rowHeight="30" id="CzK-Ud-TYI" customClass="OtherRegresCustomerDetailsTableViewCell">
+                                <rect key="frame" x="0.0" y="114" width="320" height="30"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CzK-Ud-TYI" id="4tT-Ca-9B6">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="29"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="归属集团编码：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iCW-jH-4Ro">
+                                            <rect key="frame" x="20" y="4" width="108" height="21"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" red="0.5429048782" green="0.73431095899999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="湖南拓维信息股份有限公司" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hPO-d4-cEp">
+                                            <rect key="frame" x="130" y="4" width="170" height="21"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <animations/>
+                                </tableViewCellContentView>
+                                <animations/>
+                                <connections>
+                                    <outlet property="itemContent" destination="hPO-d4-cEp" id="71i-jc-IH2"/>
+                                    <outlet property="itemTitle" destination="iCW-jH-4Ro" id="oMb-3O-h22"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="JXX-ro-FwS" id="5cZ-0d-wYb"/>
+                            <outlet property="delegate" destination="JXX-ro-FwS" id="VzF-Em-oXj"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="客户资料" id="8Qk-Z3-GZW"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uVe-da-THv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1633" y="1413"/>
+        </scene>
+        <!--提醒消息-->
+        <scene sceneID="ipf-eH-7cM">
+            <objects>
+                <viewController id="N6Y-LU-vqD" customClass="OtherRegressMessageViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bdm-eO-EcP"/>
+                        <viewControllerLayoutGuide type="bottom" id="bIh-Kb-YPO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="f9p-t2-GF3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eh4-DQ-Beh">
+                                <rect key="frame" x="0.0" y="65" width="320" height="33"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="需要再次联系的客户如下" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q4L-bf-vbg">
+                                        <rect key="frame" x="20" y="6" width="213" height="21"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="h9P-2j-aSz">
+                                <rect key="frame" x="0.0" y="98" width="320" height="470"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="OtherRegressMessageTableViewCell" rowHeight="60" id="Eij-AJ-PGl" customClass="OtherRegressMessageTableViewCell">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="60"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Eij-AJ-PGl" id="U2T-4B-WwM">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="59"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="电信.png" translatesAutoresizingMaskIntoConstraints="NO" id="Xuf-H8-G1u">
+                                                    <rect key="frame" x="20" y="10" width="34" height="35"/>
+                                                    <animations/>
+                                                </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="刘星星" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vfm-bp-LNl">
+                                                    <rect key="frame" x="71" y="10" width="60" height="21"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="15309812345" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lwZ-2v-yjb">
+                                                    <rect key="frame" x="139" y="10" width="119" height="21"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" red="1" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="上次联系时间：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OgX-KX-tkJ">
+                                                    <rect key="frame" x="71" y="29" width="93" height="21"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="13-07-08" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sWG-ac-aDd">
+                                                    <rect key="frame" x="153" y="29" width="133" height="21"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <animations/>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                        <connections>
+                                            <outlet property="itemContactDate" destination="sWG-ac-aDd" id="hOK-ma-yCP"/>
+                                            <outlet property="itemMainImageView" destination="Xuf-H8-G1u" id="vBx-VS-eH7"/>
+                                            <outlet property="itemName" destination="Vfm-bp-LNl" id="3BH-fS-LLt"/>
+                                            <outlet property="itemPhone" destination="lwZ-2v-yjb" id="uvp-Xi-F1b"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bIh-Kb-YPO" firstAttribute="top" secondItem="h9P-2j-aSz" secondAttribute="bottom" id="hka-tK-6gf"/>
+                            <constraint firstItem="eh4-DQ-Beh" firstAttribute="top" secondItem="bdm-eO-EcP" secondAttribute="bottom" constant="1" id="oog-jF-JPK"/>
+                            <constraint firstItem="h9P-2j-aSz" firstAttribute="top" secondItem="eh4-DQ-Beh" secondAttribute="bottom" id="pUf-SO-BfA"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="提醒消息" id="Nh0-SL-ev1"/>
+                    <connections>
+                        <outlet property="messageTableView" destination="h9P-2j-aSz" id="TmF-4Z-6sl"/>
+                        <segue destination="mPp-rJ-Owa" kind="push" identifier="OtherRegressCustomerFromMessageSegue" id="KMA-IG-AcB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O0K-D1-8XG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="586" y="111"/>
+        </scene>
+        <!--进展回复-->
+        <scene sceneID="ucb-1f-w5h">
+            <objects>
+                <viewController storyboardIdentifier="OtherRegressFeedbackController" id="K97-cS-Ym6" customClass="OtherRegressFeedbackController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="g7p-tk-6ce"/>
+                        <viewControllerLayoutGuide type="bottom" id="M7P-U5-kG8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="N0e-xZ-fY8">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JjL-10-J3x">
+                                <rect key="frame" x="20" y="74" width="280" height="79"/>
+                                <animations/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
+                            </textView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="敏感型客户" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vOo-Mi-eFY">
+                                <rect key="frame" x="78" y="177" width="76" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IL5-d8-H6I">
+                                <rect key="frame" x="20" y="197" width="280" height="30"/>
+                                <animations/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnAgain_link_dateOnClick:" destination="K97-cS-Ym6" eventType="touchUpInside" id="iAk-vF-njV"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="点击设定再拜访时间" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vKI-Rv-asY">
+                                <rect key="frame" x="129" y="211" width="171" height="26"/>
+                                <animations/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vwN-zj-4dk">
+                                <rect key="frame" x="20" y="253" width="280" height="30"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="0.72999999999999998" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="提交">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="submitOnClick:" destination="K97-cS-Ym6" eventType="touchUpInside" id="aSe-i5-xYD"/>
+                                </connections>
+                            </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xuk-kU-m45">
+                                <rect key="frame" x="20" y="163" width="51" height="31"/>
+                                <animations/>
+                            </switch>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="设定再拜访时间：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hjn-7e-FQP">
+                                <rect key="frame" x="20" y="212" width="131" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="进展回复" id="IC1-bW-Wa2"/>
+                    <connections>
+                        <outlet property="btnAgain_link_date" destination="IL5-d8-H6I" id="xQT-uE-Zq5"/>
+                        <outlet property="lblAgain_link_date" destination="vKI-Rv-asY" id="1CS-RS-Lan"/>
+                        <outlet property="switchIs_sensitive_user" destination="xuk-kU-m45" id="9te-fb-6fT"/>
+                        <outlet property="txtRemark" destination="JjL-10-J3x" id="ecv-7Y-CIe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HVq-Wi-fru" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1753" y="-71"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="switch_chen1.png" width="184" height="39"/>
+        <image name="switch_chen2.png" width="184" height="39"/>
+        <image name="switch_hui1.png" width="184" height="39"/>
+        <image name="switch_hui2.png" width="184" height="39"/>
+        <image name="实线条.png" width="442" height="14"/>
+        <image name="电信.png" width="47" height="47"/>
+        <image name="电话.png" width="25" height="40"/>
+        <image name="电话按钮.png" width="218" height="67"/>
+        <image name="短信按钮.png" width="218" height="65"/>
+        <image name="箭头.png" width="29" height="19"/>
+        <image name="绿勾选.png" width="36" height="35"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="p1k-U0-LGY"/>
+        <segue reference="n4D-90-XD5"/>
+    </inferredMetricsTieBreakers>
+</document>

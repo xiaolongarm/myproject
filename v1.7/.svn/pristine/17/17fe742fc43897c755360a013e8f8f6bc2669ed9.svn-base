@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="W_VisitPlanViewController">
+            <connections>
+                <outlet property="btnVisitPlanAll" destination="nNu-g7-WlQ" id="Ekb-GM-VW3"/>
+                <outlet property="btnVisitPlanDone" destination="aFF-sq-zBB" id="wvW-Yf-zpg"/>
+                <outlet property="btnVisitPlanWaitCheck" destination="MgT-kN-zgn" id="4DQ-OU-tLj"/>
+                <outlet property="btnVisitPlanWill" destination="bk2-Te-xXc" id="TDw-9e-HyK"/>
+                <outlet property="remindButton" destination="RWc-RE-ukN" id="4cC-cl-ciE"/>
+                <outlet property="view" destination="1" id="3"/>
+                <outlet property="visitPlanTableView" destination="cjb-he-zpu" id="LHF-4Q-Okh"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RWc-RE-ukN">
+                    <rect key="frame" x="84" y="5" width="137" height="22"/>
+                    <animations/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <state key="normal" title="您有0条新消息" image="箭头.png">
+                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="remindButtonOnClick:" destination="-1" eventType="touchUpInside" id="Whh-yx-zjD"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nNu-g7-WlQ">
+                    <rect key="frame" x="0.0" y="57" width="78" height="25"/>
+                    <animations/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <state key="normal" title="全部" backgroundImage="按钮带框.png">
+                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="visitPlanAllOnClick:" destination="-1" eventType="touchUpInside" id="ee5-yb-b7A"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bk2-Te-xXc">
+                    <rect key="frame" x="121" y="57" width="78" height="25"/>
+                    <animations/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <state key="normal" title="待拜访" backgroundImage="按钮框（无）.png">
+                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="visitPlanWillOnClick:" destination="-1" eventType="touchUpInside" id="7Gy-wl-qry"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aFF-sq-zBB">
+                    <rect key="frame" x="242" y="57" width="78" height="25"/>
+                    <animations/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <state key="normal" title="已完成" backgroundImage="按钮框（无）.png">
+                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="visitPlanDoneOnClick:" destination="-1" eventType="touchUpInside" id="feB-Pg-DLl"/>
+                    </connections>
+                </button>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MgT-kN-zgn">
+                    <rect key="frame" x="5" y="0.0" width="78" height="25"/>
+                    <animations/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <state key="normal" title="待审核" backgroundImage="按钮框（无）.png">
+                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="visitPlanWaitCheckOnClick:" destination="-1" eventType="touchUpInside" id="48k-uX-gsw"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oxo-DV-2Y0">
+                    <rect key="frame" x="217" y="18" width="99" height="31"/>
+                    <animations/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <state key="normal" title="［新建拜访计划］" backgroundImage="按钮框（无）.png">
+                        <color key="titleColor" red="0.5429048782" green="0.73431095899999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="highlighted">
+                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="addVisitPlan:" destination="-1" eventType="touchUpInside" id="CwR-eD-Won"/>
+                    </connections>
+                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="cjb-he-zpu">
+                    <rect key="frame" x="0.0" y="82" width="320" height="398"/>
+                    <animations/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IRk-kh-gYB">
+                    <rect key="frame" x="5" y="19" width="78" height="30"/>
+                    <animations/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <state key="normal" title="  [ 搜索 ]">
+                        <color key="titleColor" red="0.5429048782" green="0.73431095899999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="searchVisitPlan:" destination="-1" eventType="touchUpInside" id="76U-7m-3cB"/>
+                    </connections>
+                </button>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="nNu-g7-WlQ" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="5" id="2du-lH-Hdj"/>
+                <constraint firstAttribute="trailing" secondItem="cjb-he-zpu" secondAttribute="trailing" id="Nyb-5c-RbX"/>
+                <constraint firstItem="cjb-he-zpu" firstAttribute="top" secondItem="nNu-g7-WlQ" secondAttribute="bottom" id="alw-Vx-Ezi"/>
+                <constraint firstItem="cjb-he-zpu" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="eAq-Zz-luS"/>
+                <constraint firstAttribute="bottom" secondItem="cjb-he-zpu" secondAttribute="bottom" id="evq-Bl-OAn"/>
+                <constraint firstAttribute="trailing" secondItem="nNu-g7-WlQ" secondAttribute="trailing" constant="237" id="ujH-Pl-ac5"/>
+                <constraint firstItem="nNu-g7-WlQ" firstAttribute="top" secondItem="1" secondAttribute="top" constant="57" id="zrt-1E-Q0q"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="按钮带框.png" width="105" height="25"/>
+        <image name="按钮框（无）.png" width="105" height="25"/>
+        <image name="箭头.png" width="29" height="19"/>
+    </resources>
+</document>

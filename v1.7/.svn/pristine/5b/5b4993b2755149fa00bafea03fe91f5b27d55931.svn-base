@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="W_VisitPlanAddSelectAddressController">
+            <connections>
+                <outlet property="lbSelectAddress" destination="Fn9-f9-iXg" id="edn-fB-O4e"/>
+                <outlet property="mapView" destination="UpX-rG-GQd" id="KiN-ow-XMG"/>
+                <outlet property="searchbar" destination="7LX-7u-JoU" id="yxk-Bo-9aU"/>
+                <outlet property="touchRemarkButton" destination="9qG-H3-1PJ" id="Ni7-xH-2Jh"/>
+                <outlet property="view" destination="1" id="3"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UpX-rG-GQd" customClass="BMKMapView">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="505"/>
+                    <animations/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="7LX-7u-JoU">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <animations/>
+                    <textInputTraits key="textInputTraits"/>
+                </searchBar>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UNy-dm-BDh">
+                    <rect key="frame" x="0.0" y="505" width="320" height="63"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9qG-H3-1PJ">
+                            <rect key="frame" x="7" y="5" width="25" height="25"/>
+                            <animations/>
+                            <state key="normal" image="未勾选.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="selected" image="勾选.png"/>
+                            <connections>
+                                <action selector="touchRemarkButtonOnclick:" destination="-1" eventType="touchUpInside" id="eZU-Kr-ZUX"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="尚未选择地址" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fn9-f9-iXg">
+                            <rect key="frame" x="7" y="34" width="305" height="21"/>
+                            <animations/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="手工标注" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KzD-Gl-jN9">
+                            <rect key="frame" x="36" y="9" width="83" height="21"/>
+                            <animations/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WRd-1B-IAk">
+                            <rect key="frame" x="190" y="3" width="127" height="30"/>
+                            <animations/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <state key="normal" title="［ 定位当前位置 ］">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="updateUserCurrentLocationOnclick:" destination="-1" eventType="touchUpInside" id="ykf-fU-yf8"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <animations/>
+                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="UpX-rG-GQd" firstAttribute="top" secondItem="1" secondAttribute="top" id="17x-jB-NUq"/>
+                <constraint firstAttribute="trailing" secondItem="UNy-dm-BDh" secondAttribute="trailing" id="32P-tR-gCe"/>
+                <constraint firstItem="UpX-rG-GQd" firstAttribute="trailing" secondItem="UNy-dm-BDh" secondAttribute="trailing" id="3o2-6i-JbW"/>
+                <constraint firstAttribute="bottom" secondItem="UpX-rG-GQd" secondAttribute="bottom" constant="63" id="GeM-i0-67F"/>
+                <constraint firstItem="UpX-rG-GQd" firstAttribute="leading" secondItem="UNy-dm-BDh" secondAttribute="leading" id="SWg-QF-iKB"/>
+                <constraint firstItem="UpX-rG-GQd" firstAttribute="trailing" secondItem="7LX-7u-JoU" secondAttribute="trailing" id="UAv-Iv-dG9"/>
+                <constraint firstItem="UNy-dm-BDh" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="WB2-jj-VTb"/>
+                <constraint firstItem="UpX-rG-GQd" firstAttribute="top" secondItem="7LX-7u-JoU" secondAttribute="top" id="Wfr-JB-Rww"/>
+                <constraint firstItem="UNy-dm-BDh" firstAttribute="top" secondItem="UpX-rG-GQd" secondAttribute="bottom" id="a1M-mF-h4E"/>
+                <constraint firstAttribute="bottom" secondItem="UNy-dm-BDh" secondAttribute="bottom" id="ghj-Ld-q5r"/>
+                <constraint firstItem="UpX-rG-GQd" firstAttribute="leading" secondItem="7LX-7u-JoU" secondAttribute="leading" id="tcO-wB-lc8"/>
+            </constraints>
+            <point key="canvasLocation" x="190" y="211"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="勾选.png" width="39" height="39"/>
+        <image name="未勾选.png" width="39" height="39"/>
+    </resources>
+</document>
